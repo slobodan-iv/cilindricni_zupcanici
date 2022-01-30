@@ -1,0 +1,943 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather|Tangerine|Caveat" rel="stylesheet">
+    <!-- Bootstrap CSS
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Завршни прорачун!</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="Pictures/logo3.png" width="90" height="60" class="d-inline-block align-top rounded" alt="M3Design"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Поставка задатка</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Прорачуни
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="prethodni_proracun.html">Претходни прорачун</a>
+                </li>
+                <li>
+                  <a class="dropdown-item active" href="#">Завршни прорачун</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="proracun_evolventi.html">Прорачун еволвенти</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="st_sigurnosti.html">Степен сигурности</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tolerancije.html">Толеранције зупчаника</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="modeli_crtezi.html">Моделирање и цртежи</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Повезани Web site-ови
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Моделирање и симулација пом. рач.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/konstruisanje/">Конструисање</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav><!-- navbar -->
+    <!-- container -->
+    <div class="container">
+      <!-- Content here -->
+      <div>
+        <h1>Завршни прорачун зупчаног пара</h1>
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-12 col-md-11 col-lg-10">
+            <div class="accordion-item" id="zav_proracun">
+              <p>
+                У 
+                <strong>
+                  претходном 
+                </strong>
+                прорачуну смо одредили модул у равни нормалној на бок зупца, чија стандардна вредност износи: <img src="Pictures/png/mn=.png" alt="mn="> 5 <img src="Pictures/png/mm.png" alt="mm">
+              </p>
+              <p>
+                У <strong>
+                  завршном 
+                </strong>
+                прорачуну:
+              </p>
+              <ul class="left_padding welcome">
+                <li>
+                  <strong>
+                    усвајамо радни век (T)
+                  </strong> зупчаног пара, на основу којег одређујемо број спрезања ( <img src="Pictures/png/n_sprez_solo.png" alt="n&Sigma;"> ), те на крају испитујемо да ли су зупци оптерећени статички или динамички и одређујемо чврстоће тј. издржљивости материјала које су меродавне за прорачун,
+                </li>
+                <li>
+                   <strong>
+                     рачунамо геометријске мере и кинематске величине зупчаног пара
+                   </strong>
+                   , како бисмо могли да проверимо степен сигурности против лома зубаца зупчаника те димензионишемо остале делове једностепеног редуктора.
+                </li>
+              </ul>
+              <ul class="nav nav-tabs" id="zavrsni_proracun_Tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="izdrzljivost-tab" data-bs-toggle="tab" data-bs-target="#izdrzljivost" type="button" role="tab" aria-controls="izdrzljivost" aria-selected="true">Издржљивост материјала</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="geometrijske_mere-tab" data-bs-toggle="tab" data-bs-target="#geometrijske_mere" type="button" role="tab" aria-controls="geometrijske_mere" aria-selected="false">Геометријске мере и кинематски односи</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="zavrsni_proracun_TabContent">
+                <div class="tab-pane show active" id="izdrzljivost" role="tabpanel" aria-labelledby="izdrzljivost-tab">
+                  <p>
+                    <strong>
+                      Улазни подаци:
+                    </strong>
+                  </p>
+                  <p>
+                    Снага на погонском вратилу: <img src="Pictures/png/P=.png" alt="P="> 80 <img src="Pictures/png/kW_zag.png" alt="kW">
+                  </p>
+                  <p>
+                    Број обртаја погонског зупчаника: <img src="Pictures/png/n1=.png" alt="n1="> 700 <img src="Pictures/png/min_1_zag.png" alt="min-1">= 11.667 <img src="Pictures/png/s_minus1_zag.png" alt="s-1">
+                  </p>
+                  <p>
+                    Задани преносни однос: <img src="Pictures/png/i=.png" alt="i="> 2
+                  </p>
+                  <p>
+                    Број обртаја гоњеног вратила: <img src="Pictures/png/n2=.png" alt="n2="> 350 <img src="Pictures/png/min_1_zag.png" alt="min-1">= 5.833 <img src="Pictures/png/s_minus1_zag.png" alt="s-1">
+                  </p>
+                  <p>
+                    Режим рада извршног органа са умереним ударима: <img src="Pictures/png/KA=.png" alt="KA="> 1.25
+                  </p>
+                  <p>
+                     <strong>
+                       Усвајам радни век 
+                     </strong>
+                     зупчаника: <img src="Pictures/png/T=.png" alt="T="> 10000 <img src="Pictures/png/h.png" alt="h">
+                  </p>
+                  <p>
+                    Мали зупчаник је погонски а велики гоњени, за случај 
+                    <strong>
+                      редуктора!
+                    </strong>
+                  </p>
+                  <p>
+                    На основу вредности броја спрезања <img src="Pictures/png/n_sprez_solo.png" alt="n&Sigma;"> у радном веку зупчаника могући су следећи случајеви:
+                  </p>
+                  <p>
+                    <strong>
+                      Статички напрегнути зупци: 
+                    </strong>
+                    <img src="Pictures/png/n_sprez_stat.png" alt="n&Sigma;<Ns">
+                  </p>
+                  <p>
+                    <img src="Pictures/png/NS.png" alt="Ns"> - граничан статички број циклуса
+                  </p>
+                  <ul class="left_padding">
+                    <li>
+                      статичка чврстоћа је меродавнa за прорачун:
+                    </li>
+                      <ol>
+                        <li>
+                          бокова зубаца која се рачуна: <img src="Pictures/png/sigmaH_stat_pr.png" alt="&Sigma;Hs">
+                        </li>
+                        <li>
+                          подножја зубаца: <img src="Pictures/png/sigma_FS.png" alt="&Sigma;Fs">, даје се у табели Т 4.5
+                        </li>
+                      </ol>
+                  </ul>
+                  <p>
+                    <img src="Pictures/png/ZS.png" alt="Zs"> - фактор статичке чврстоће Т 7.187
+                  </p>
+                  <p>
+                    <strong>
+                      Динамички напрегнути зупци: 
+                    </strong>
+                    <img src="Pictures/png/n_sprez_vece_NS.png" alt="n&Sigma;>Ns">, могућа су два подслучаја:
+                  </p>
+                  <ul class="left_padding">
+                    <li>
+                      <img src="Pictures/png/n_sprez.png" alt="n&Sigma;<ND"> - за прорачун је меродавна коначна динамичка издржљивост:
+                    </li>
+                      <ol>
+                        <li>
+                          бокова зубаца која се рачуна: <img src="Pictures/png/sigma_kon_a.png" alt="&Sigma;HN">
+                        </li>
+                        <li>
+                          подножја зубаца: <img src="Pictures/png/sigma_Fkon.png" alt="&Sigma;FN">
+                        </li>
+                      </ol>
+                    <li>
+                      <img src="Pictures/png/n_sprez_vece_ND.png" alt="n&Sigma;>ND"> - за прорачун је меродавна трајна динамичка издржљивост:
+                    </li>
+                      <ol>
+                        <li>
+                          бокова зубаца: <img src="Pictures/png/sigma_Hlim.png" alt="&Sigma;Hlim">, даје се у табели Т 4.5
+                        </li>
+                        <li>
+                          подножја зубаца: <img src="Pictures/png/sigma_Flim.png" alt="&Sigma;Flim">, даје се у табели Т 4.5
+                        </li>
+                      </ol>
+                  </ul>
+                  <p>
+                    <img src="Pictures/png/ND.png" alt="ND"> - број циклуса промене напона када је за прорачун меродавна трајна динамичка чврстоћа Т 7.187.
+                  </p>
+                  <p>
+                    <strong>
+                      На основу улазних података пројектног задатка добијамо:
+                    </strong>
+                  </p>
+                  <p>
+                    <img src="Pictures/png/n_sprez_pr.png" alt="n&Sigma;="> 420 000 000 обртаја
+                  </p>
+                  <p>
+                    Из Т 7.187 за површински отврднут челик (Č.1220) усвајамо <img src="Pictures/png/ND.png" alt="ND">: 
+                  </p>
+                  <div class="accordion" id="accordion_T_7_187">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading_T_7_187">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T_7_187" aria-expanded="true" aria-controls="collapse_T_7_187">
+                          Т 7.187 - Карактеристике издржљивости
+                        </button>
+                      </h2>
+                      <div id="collapse_T_7_187" class="accordion-collapse collapse" aria-labelledby="heading_T_7_187" data-bs-parent="#accordion_T_7_187">
+                        <div class="accordion-body">
+                          <img src="Pictures/T_7_187.jpg" width="100%" alt="T7.187">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <img src="Pictures/png/ND=.png" alt="ND="> 50 000 000 - за бокове зубаца,
+                  </p>
+                  <p>
+                    <img src="Pictures/png/ND=.png" alt="ND="> 3 000 000 - за подножје зубаца,
+                  </p>
+                  <p>
+                    <strong>
+                      Закључујемо да је: 
+                    </strong>
+                    <img src="Pictures/png/n_sprez_vece_ND.png" alt="n&Sigma;>ND"> - за прорачун је <strong>
+                      меродавна трајна динамичка издржљивост.
+                    </strong>
+                  </p>
+                  <p>
+                    Из Т 4.5 усвајамо: <img src="Pictures/png/sigma_Hlim.png" alt="&Sigma;Hlim">, <img src="Pictures/png/sigma_Flim.png" alt="&Sigma;Flim"> (као што смо и радили у 
+                    <strong>
+                      претходном прорачуну
+                    </strong>
+                    ).
+                  </p>
+                </div>
+                <div class="tab-pane" id="geometrijske_mere" role="tabpanel" aria-labelledby="geometrijske_mere-tab">
+                  <div class="accordion" id="geometrijske_mere_i_kin_odnosi">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="osnovna_zupcanica">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_osnovna_zupcanica" aria-expanded="true" aria-controls="collapse_osnovna_zupcanica">
+                          Основна зупчаница
+                        </button>
+                      </h2>
+                      <div id="collapse_osnovna_zupcanica" class="accordion-collapse collapse show" aria-labelledby="osnovna_zupcanica" data-bs-parent="#geometrijske_mere_i_kin_odnosi">
+                        <div class="accordion-body">
+                          <p>
+                            <strong>
+                              Угао нагиба 
+                            </strong>
+                            профила у 
+                            <strong>
+                              нормалном 
+                            </strong>пресеку: <img src="Pictures/png/alfa_n=.png" alt="&alpha;n="> 20 &deg;
+                          </p>
+                          <p>
+                            <strong>
+                              Угао нагиба 
+                            </strong>
+                            бочне линије на 
+                            <strong>
+                              подеоном 
+                            </strong>
+                            кругу: <img src="Pictures/png/beta=.png" alt="beta="> 5 &deg;
+                          </p>
+                          <p>
+                            <strong>
+                              Угао нагиба 
+                            </strong>
+                            профила у 
+                            <strong>
+                              главном 
+                            </strong>
+                            пресеку се рачуна на основу израза: <img src="Pictures/png/tan_alfa_t=.png" alt="tg&alpha;t="> 0.365361;
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/alfa_t=.png" alt="&alpha;t="> 0.350293 rad
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/alfa_t=.png" alt="&alpha;t="> 20.07031 &deg;
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="br_zubaca">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_br_zubaca" aria-expanded="true" aria-controls="collapse_br_zubaca">
+                          Бројеви зубаца и њихов однос
+                        </button>
+                      </h2>
+                      <div id="collapse_br_zubaca" class="accordion-collapse collapse" aria-labelledby="br_zubaca" data-bs-parent="#geometrijske_mere_i_kin_odnosi">
+                        <div class="accordion-body">
+                          <p>
+                            <strong>
+                              Број зубаца 
+                            </strong>
+                            погонског зупчаника је задан у улазним подацима пројектног задатка: <img src="Pictures/png/z1=.png" alt="z1="> 25
+                          </p>
+                          <p>
+                            Преносни однос је такође задан: <img src="Pictures/png/i=.png" alt="i="> 2
+                          </p>
+                          <p>
+                            <strong>
+                              Број зубаца 
+                            </strong>
+                            гоњеног зупчаника: <img src="Pictures/png/z2=.png" alt="z2="> 50 - 
+                            <strong>
+                              усвајам 
+                            </strong>
+                            (заокружује се на ближи цели број): <img src="Pictures/png/z2=_solo.png" alt="z2="> 50
+                          </p>
+                          <p>
+                            Кинематски преносни однос се рачуна: <img src="Pictures/png/u=_pr.png" alt="u="> 2
+                          </p>
+                          <p>
+                            Број зубаца 
+                            <strong>
+                              еквивалентног цилиндричног 
+                            </strong>
+                            зупчаника са 
+                            <strong>
+                              правим 
+                            </strong>
+                            зупцима рачунамо по изразу: <img src="Pictures/png/zn_z.png" alt="zn">
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/zn1=.png" alt="zn1="> 25.288
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/zn2=.png" alt="zn2="> 50.575
+                          </p>
+                          <p>
+                            <strong>
+                              Модул 
+                            </strong>
+                            зупчаника:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/mn=.png" alt="mn="> 5 <img src="Pictures/png/mm.png" alt="mm"> - у 
+                            <strong>
+                              бочном 
+                            </strong>
+                            пресеку (усвојен у 
+                            <strong>
+                              претходном 
+                            </strong>
+                            прорачуну)
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/mt_izr=.png" alt="mt="> 5.019 <img src="Pictures/png/mm.png" alt="mm"> - у 
+                            <strong>
+                              главном 
+                            </strong>
+                            пресеку
+                          </p>
+                          <p>
+                            <strong>
+                              Ширину 
+                            </strong>
+                            зупчаника рачунамо по изразу: <img src="Pictures/png/b=.png" alt="b="> 75.286 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p class="left_padding">
+                            усвајам ширину 
+                            <strong>
+                              гоњеног 
+                            </strong>
+                            зупчаника: <img src="Pictures/png/b2=.png" alt="b2="> 76 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p class="left_padding">
+                            усвајам ширину 
+                            <strong>
+                              погонског 
+                            </strong>
+                            зупчаника: <img src="Pictures/png/b1=.png" alt="b1="> 80 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="pomeranje_profila">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_pomeranje_profila" aria-expanded="true" aria-controls="collapse_pomeranje_profila">
+                          Померање профила
+                        </button>
+                      </h2>
+                      <div id="collapse_pomeranje_profila" class="accordion-collapse collapse" aria-labelledby="pomeranje_profila" data-bs-parent="#geometrijske_mere_i_kin_odnosi">
+                        <div class="accordion-body">
+                          <p>
+                            Померање профила у 
+                            <strong>
+                              главном пресеку 
+                            </strong>
+                            је различито од нуле по поставци задатка:
+                          </p>
+                          <p class="left_padding">
+                            Коефицијент померања профила погонског зупчаника: <img src="Pictures/png/xt1=.png" alt="xt1="> 0.4
+                          </p>
+                          <p class="left_padding">
+                            Коефицијент померања профила гоњеног зупчаника: <img src="Pictures/png/xt2=.png" alt="xt2="> 0.2
+                          </p>
+                          <p>
+                            Померање профила у 
+                            <strong>
+                              бочном пресеку 
+                            </strong>
+                            рачунамо по изразима:
+                          </p>
+                          <p class="left_padding">
+                            Коефицијент померања профила погонског зупчаника: <img src="Pictures/png/xn1=.png" alt="xn1="> 0.401528
+                          </p>
+                          <p class="left_padding">
+                            Коефицијент померања профила гоњеног зупчаника: <img src="Pictures/png/xn2=.png" alt="xn2="> 0.200764
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="db_i_d">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_db_i_d" aria-expanded="true" aria-controls="collapse_db_i_d">
+                          Пречници основних и подеоних кружница
+                        </button>
+                      </h2>
+                      <div id="collapse_db_i_d" class="accordion-collapse collapse" aria-labelledby="db_i_d" data-bs-parent="#geometrijske_mere_i_kin_odnosi">
+                        <div class="accordion-body">
+                          <p>
+                            Пречници 
+                            <strong>
+                              подеоних 
+                            </strong>
+                            кружница:
+                          </p>
+                          <p class="left_padding">
+                            погонског зупчаника: <img src="Pictures/png/d1=_pr.png" alt="d1=mt*z1="> 125.477 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p class="left_padding">
+                            гоњеног зупчаника: <img src="Pictures/png/d2=_pr.png" alt="d2=mt*z2="> 250.955 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p>
+                            Пречници 
+                            <strong>
+                              основних 
+                            </strong>
+                            кружница:
+                          </p>
+                          <p class="left_padding">
+                            погонског зупчаника: <img src="Pictures/png/db1=.png" alt="db1=d1*cos(&alpha;t)="> 117.858 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p class="left_padding">
+                            полупречник основне кружнице: <img src="Pictures/png/rb1=.png" alt="rb1="> 58.929 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p class="left_padding">
+                            гоњеног зупчаника: <img src="Pictures/png/db2=.png" alt="db2=d2*cos(&alpha;)t="> 235.715 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p class="left_padding">
+                            полупречник основне кружнице: <img src="Pictures/png/rb2=.png" alt="rb2="> 117.8575 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="ugao_dodirnice">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_ugao_dodirnice" aria-expanded="true" aria-controls="collapse_ugao_dodirnice">
+                          Нападни угао еволвенте на кинематској кружници и угао додирнице
+                        </button>
+                      </h2>
+                      <div id="collapse_ugao_dodirnice" class="accordion-collapse collapse" aria-labelledby="ugao_dodirnice" data-bs-parent="#geometrijske_mere_i_kin_odnosi">
+                        <div class="accordion-body">
+                          <p>
+                            <strong>
+                              Еволвентни угао 
+                            </strong>
+                            на 
+                            <strong>
+                              кинематској 
+                            </strong>
+                            кружници рачунамо на основу израза:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/invAlfatw=.png" alt="inv&alpha;tw="> 0.020913 rad
+                          </p>
+                          <p class="left_padding">
+                            Еволвентни угао на 
+                            <strong>
+                              подеоној кружници: 
+                            </strong><img src="Pictures/png/invAlfat=.png" alt="inv&alpha;t="> 0.0150676 rad
+                          </p>
+                          <p>
+                            Потребно је одредити 
+                            <strong>
+                              угао додирнице 
+                            </strong>
+                            на основу израчунатог еволвентног угла. 
+                          </p>
+                          <p>
+                            Поступак се састоји од низа итеративних корака, где усвајамо вредност k из Т 7.164, поново рачунамо приближне вредности угла додирнице, док грешка не буде мања од дозвољене, као што следи:
+                          </p>
+                          <p class="left_padding">
+                            Из Т 7.164 бирамо вредност: <img src="Pictures/png/k=.png" alt="k="> 2.85
+                          </p>
+                          <div class="accordion" id="accordion_T_7_164">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="heading_T_7_164">
+                                <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T_7_164" aria-expanded="true" aria-controls="collapse_T_7_164">
+                                  Т 7.164 - Вредност k за дати еволвентни угао
+                                </button>
+                              </h2>
+                              <div id="collapse_T_7_164" class="accordion-collapse collapse" aria-labelledby="heading_T_7_164" data-bs-parent="#accordion_T_7_164">
+                                <div class="accordion-body">
+                                  <img src="Pictures/T_7_164.jpg" width="100%" alt="T7.164">
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <p>
+                            Рачунамо прву приближну вредност угла додирнице:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/alfa_tw1=.png" alt="&alpha;tw1="> 0.3906214 rad
+                          </p>
+                          <p>
+                            Рачунамо еволвентни угао, поново:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/invAlfatw1=.png" alt="inv&alpha;tw1="> 0.021160 rad
+                          </p>
+                          <p>
+                            Рачунамо разлику између израчунатог и заданог еволвентног угла додирнице и упоређујемо је са дозвољеном разликом:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/delta1=.png" alt="&delta;1="> 0.000247 rad
+                          </p>
+                          <p>
+                            <strong>
+                              Дозвољена разлика 
+                            </strong>
+                            се креће у границама: <img src="Pictures/png/delta_doz_vr.png" alt="&delta;doz=10^-4 или 10^-5">
+                          </p>
+                          <p>
+                            <strong>
+                              усвајам: 
+                            </strong>
+                            <img src="Pictures/png/delta_doz_usv.png" alt="&delta;doz=10^-5">
+                          </p>
+                          <p>
+                            Како израчуната разлика 
+                            <strong>
+                              није мања од дозвољене 
+                            </strong>
+                            (већа је), пробаћемо са првим мањим углом према једначини:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/alfa_tw2=.png" alt="&alpha;tw2="> 0.3891661 rad
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/invAlfatw2=.png" alt="inv&alpha;tw2="> 0.0209144 rad
+                          </p>
+                          <p>
+                            Рачунамо разлику:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/delta2=.png" alt="&delta;2="> 1.018E-06 rad < <img src="Pictures/png/delta_doz_usv.png" alt="&delta;doz=10^-5">
+                          </p>
+                          <p>
+                            Како је израчуната разлика мања од усвојене дозвољене разлике, нема потребе да даље да рачунамо.
+                          </p>
+                          <p class="left_padding">
+                            Дакле 
+                            <strong>
+                              угао додирнице 
+                            </strong>
+                            је: <img src="Pictures/png/alfa_tw=.png" alt="&alpha;tw="> 0.3891661 rad
+                          </p>
+                          <p>
+                            Да је израчуната прва разлика била 
+                            <strong>
+                              мања од дозвољене 
+                            </strong>
+                            (тачност је пуно већа од усвојене), ако желимо да задовољимо услов дозвољене разлике пробали бисмо са првим већим углом по једначини:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/Alfa_tw_supr.png" alt="&alpha;tw">
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="dw">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_dw" aria-expanded="true" aria-controls="collapse_dw">
+                          Пречници кинематских кружница
+                        </button>
+                      </h2>
+                      <div id="collapse_dw" class="accordion-collapse collapse" aria-labelledby="dw" data-bs-parent="#geometrijske_mere_i_kin_odnosi">
+                        <div class="accordion-body">
+                          <p>
+                            Пречници 
+                            <strong>
+                              кинематских 
+                            </strong>
+                            кружница:
+                          </p>
+                          <p class="left_padding">
+                            погонског зупчаника: <img src="Pictures/png/dw1=.png" alt="dw1=d1*cos(&alpha;t)/cos(&alpha;tw)="> 127.382 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p class="left_padding">
+                            полупречник кинематске кружнице: <img src="Pictures/png/rw1=.png" alt="rw1="> 63.691 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p class="left_padding">
+                            гоњеног зупчаника: <img src="Pictures/png/dw2=.png" alt="dw2=d2*cos(&alpha;)t/cos(&alpha;tw)="> 254.765 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p class="left_padding">
+                            полупречник кинематске кружнице: <img src="Pictures/png/rw2=.png" alt="rw2="> 127.382 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="osno_rast">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_osno_rast" aria-expanded="true" aria-controls="collapse_osno_rast">
+                          Осно растојање
+                        </button>
+                      </h2>
+                      <div id="collapse_osno_rast" class="accordion-collapse collapse" aria-labelledby="osno_rast" data-bs-parent="#geometrijske_mere_i_kin_odnosi">
+                        <div class="accordion-body">
+                          <p>
+                             Осно 
+                            <strong>
+                               растојање 
+                            </strong>
+                            зупчаника рачунамо на основу израза:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/a=.png" alt="a="> 191.074 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="df">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_df" aria-expanded="true" aria-controls="collapse_df">
+                          Пречници подножних кружница
+                        </button>
+                      </h2>
+                      <div id="collapse_df" class="accordion-collapse collapse" aria-labelledby="df" data-bs-parent="#geometrijske_mere_i_kin_odnosi">
+                        <div class="accordion-body">
+                          <p>
+                            Пречници 
+                            <strong>
+                              подножних 
+                            </strong>
+                            кружница:
+                          </p>
+                          <p class="left_padding">
+                            погонског зупчаника: <img src="Pictures/png/df1=.png" alt="df1=d1-2*mn*(1+Ca0-xn1)="> 116.993 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p class="left_padding">
+                            гоњеног зупчаника: <img src="Pictures/png/df2=.png" alt="df2=d2-2*mn*(1+Ca0-xn2)="> 240.463 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p>
+                            Усвајам вредност коефицијента <img src="Pictures/png/ca0=.png" alt="Ca0="> 0.25, према препорукама за праве зупце!
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="da">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_da" aria-expanded="true" aria-controls="collapse_da">
+                          Пречници темених кружница
+                        </button>
+                      </h2>
+                      <div id="collapse_da" class="accordion-collapse collapse" aria-labelledby="da" data-bs-parent="#geometrijske_mere_i_kin_odnosi">
+                        <div class="accordion-body">
+                          <p>
+                            Пречници 
+                            <strong>
+                              темених 
+                            </strong>
+                            кружница:
+                          </p>
+                          <p class="left_padding">
+                            погонског зупчаника: <img src="Pictures/png/da1=.png" alt="dа1=d1+2*mn*(1+Ca0+xn1)="> 139.493 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p>
+                            <strong>
+                              усвајам: 
+                            </strong>
+                            <img src="Pictures/png/da1_usv=.png" alt="dа1="> 140 h8 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p class="left_padding">
+                            полупречник темене кружнице: <img src="Pictures/png/ra1=.png" alt="ra1="> 70 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p class="left_padding">
+                            гоњеног зупчаника: <img src="Pictures/png/da2=.png" alt="dа2=dа2-2*mn*(1+Ca0+xn2)="> 262.963 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p>
+                            <strong>
+                              усвајам: 
+                            </strong>
+                            <img src="Pictures/png/da2_usv=.png" alt="dа2="> 263 h8 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p class="left_padding">
+                            полупречник темене кружнице: <img src="Pictures/png/ra2=.png" alt="ra2="> 131.5 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="koraci">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_koraci" aria-expanded="true" aria-controls="collapse_koraci">
+                          Кораци зупчаника
+                        </button>
+                      </h2>
+                      <div id="collapse_koraci" class="accordion-collapse collapse" aria-labelledby="koraci" data-bs-parent="#geometrijske_mere_i_kin_odnosi">
+                        <div class="accordion-body">
+                          <p> 
+                            <strong>
+                               Подеони 
+                            </strong>
+                            кораци:
+                          </p>
+                          <p class="left_padding">
+                            у бочном пресеку: <img src="Pictures/png/pn=.png" alt="pn="> 15.708 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p class="left_padding">
+                            у главном пресеку: <img src="Pictures/png/pt=.png" alt="pt="> 15.768 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p> 
+                            <strong>
+                               Основни 
+                            </strong>
+                            корак:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/pbt=.png" alt="pbt="> 14.810 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="dodirnica">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_dodirnica" aria-expanded="true" aria-controls="collapse_dodirnica">
+                          Дужина додирнице
+                        </button>
+                      </h2>
+                      <div id="collapse_dodirnica" class="accordion-collapse collapse" aria-labelledby="dodirnica" data-bs-parent="#geometrijske_mere_i_kin_odnosi">
+                        <div class="accordion-body">
+                          <p>
+                              Активна 
+                            <strong>
+                                дужина додирнице
+                            </strong>
+                            :
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/galfa_pr.png" alt="g&alpha;="> 23.610 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/galfa=.png" alt="g&alpha;="> 24 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="st_sprezanja">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_st_sprezanja" aria-expanded="true" aria-controls="collapse_st_sprezanja">
+                          Степен спрезања
+                        </button>
+                      </h2>
+                      <div id="collapse_st_sprezanja" class="accordion-collapse collapse" aria-labelledby="st_sprezanja" data-bs-parent="#geometrijske_mere_i_kin_odnosi">
+                        <div class="accordion-body">
+                          <p>
+                              Степен спрезања  
+                            <strong>
+                                профила
+                            </strong>
+                            :
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/eps_alfa=.png" alt="&epsilon;&alpha;="> 1.594
+                          </p>
+                          <p>
+                              Степен спрезања  
+                            <strong>
+                                бочних линија
+                            </strong>
+                            :
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/eps_beta=.png" alt="&epsilon;&beta;="> 0.422 (претхдони прорачун - фактор <img src="Pictures/png/Kv.png" alt="Kv">)
+                          </p>
+                          <p>  
+                            <strong>
+                                Укупан 
+                            </strong>
+                            степен спрезања::
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/eps_gama=.png" alt="&epsilon;&gamma;="> 2.016
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="mere_prekozubaca">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_mere_prekozubaca" aria-expanded="true" aria-controls="collapse_mere_prekozubaca">
+                          Мере прекозубаца
+                        </button>
+                      </h2>
+                      <div id="collapse_mere_prekozubaca" class="accordion-collapse collapse" aria-labelledby="mere_prekozubaca" data-bs-parent="#geometrijske_mere_i_kin_odnosi">
+                        <div class="accordion-body">
+                          <p>
+                              Угао нагиба бочне линије зубаца на основном кругу:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/sin_alfa_t=.png" alt="cos&beta;b="> 0.996641, на основу кога рачунамо:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/beta_b=.png" alt="&beta;b="> 0.081991 rad
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/beta_b=.png" alt="&beta;b="> 4.697764 &deg;
+                          </p>
+                          <p>
+                            Мерни број прекозубаца 
+                            <strong>
+                              погонског 
+                            </strong>
+                            зупчаника:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/zw1=.png" alt="zw1="> 3.93
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/tanalfatx1=.png" alt="tg&alpha;tx1="> 0.455184
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/zw1_solo=.png" alt="zw1="> 4 (
+                            <strong>
+                              заокружујемо 
+                            </strong>
+                            на ближи цели број)
+                          </p>
+                          <p>
+                            Мера преко <img src="Pictures/png/zw1_solo=.png" alt="zw1="> 4 зупца <strong>
+                              погонског 
+                            </strong>
+                            зупчаника зноси:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/w1=.png" alt="w1="> 54.805 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                          <p>
+                            Мерни број прекозубаца 
+                            <strong>
+                              гоњеног 
+                            </strong>
+                            зупчаника:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/zw2=.png" alt="zw2="> 6.45
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/tanalfatx2=.png" alt="tg&alpha;tx2="> 0.389483
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/zw2_solo=.png" alt="zw2="> 6 (
+                            <strong>
+                              заокружујемо 
+                            </strong>
+                            на ближи цели број)
+                          </p>
+                          <p>
+                            Мера преко <img src="Pictures/png/zw2_solo=.png" alt="zw2="> 6 зубаца <strong>
+                              гоњеног 
+                            </strong>
+                            зупчаника зноси:
+                          </p>
+                          <p class="left_padding">
+                            <img src="Pictures/png/w2=.png" alt="w2="> 85.410 <img src="Pictures/png/mm.png" alt="mm">
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <nav class="card-header" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">&copy; Slobodan Ivković</li>
+                  <li class="breadcrumb-item"><a href="https://www.linkedin.com/in/slobodan-ivkovic-a08326ba"><img src="Pictures/Icons/linkedin.png" alt="linkedin logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://twitter.com/slobodan_iv"><img src="Pictures/Icons/twitter.png" alt="twitter logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://www.youtube.com/user/Mickijedini"><img src="Pictures/Icons/youtube.png" alt="youtube logo"></a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- container -->
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

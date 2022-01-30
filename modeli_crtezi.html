@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather|Tangerine|Caveat" rel="stylesheet">
+    <!-- Bootstrap CSS
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Цртежи са моделирањем!</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="Pictures/logo3.png" width="90" height="60" class="d-inline-block align-top rounded" alt="M3Design"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Поставка задатка</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Прорачуни
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="prethodni_proracun.html">Претходни прорачун</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="zavrsni_proracun.html">Завршни прорачун</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="proracun_evolventi.html">Прорачун еволвенти</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="st_sigurnosti.html">Степен сигурности</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tolerancije.html">Толеранције зупчаника</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Моделирање и цртежи</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Повезани Web site-ови
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Моделирање и симулација пом. рач.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/konstruisanje/">Конструисање</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav><!-- navbar -->
+    <!-- container -->
+    <div class="container">
+      <!-- Content here -->
+      <div>
+        <h1>Моделирање цилиндричних зупчаника, склопа и израда цртежа</h1>
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-12 col-md-11 col-lg-10">
+            <div class="accordion" id="modeli_i_crtezi">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="pogonski_zupcanik">
+                  <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_pogonski_zupcanik" aria-expanded="true" aria-controls="collapse_pogonski_zupcanik">
+                    Моделирање и цртеж погонског зупчаника
+                  </button>
+                </h2>
+                <div id="collapse_pogonski_zupcanik" class="accordion-collapse collapse show" aria-labelledby="pogonski_zupcanik" data-bs-parent="#modeli_i_crtezi">
+                  <ul class="nav nav-tabs" id="pogonski_zupcanik_Tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="crtez_pogonskog_zupcanika-tab" data-bs-toggle="tab" data-bs-target="#crtez_pogonskog_zupcanika" type="button" role="tab" aria-controls="crtez_pogonskog_zupcanika" aria-selected="true">Цртеж</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="T_4_7-tab" data-bs-toggle="tab" data-bs-target="#T_4_7" type="button" role="tab" aria-controls="T_4_7" aria-selected="false">Т 4.7</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="modeliranje_pogonskog_zupcanika-tab" data-bs-toggle="tab" data-bs-target="#modeliranje_pogonskog_zupcanika" type="button" role="tab" aria-controls="modeliranje_pogonskog_zupcanika" aria-selected="false">Моделирање</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="dodatni_proracun_pogonski-tab" data-bs-toggle="tab" data-bs-target="#dodatni_proracun_pogonski" type="button" role="tab" aria-controls="dodatni_proracun_pogonski" aria-selected="false">Додатни прорачун</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="izrada_crteza_pogonskog_zupcanika-tab" data-bs-toggle="tab" data-bs-target="#izrada_crteza_pogonskog_zupcanika" type="button" role="tab" aria-controls="izrada_crteza_pogonskog_zupcanika" aria-selected="false">Израда цртежа</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pogonski_zupcanik_TabContent">
+                    <div class="tab-pane show active" id="crtez_pogonskog_zupcanika" role="tabpanel" aria-labelledby="crtez_pogonskog_zupcanika-tab">
+                      <div class="accordion-body">
+                        <img src="Pictures/Crtezi/Pogonski_cilindricni_zupcanik.jpg" width="100%" alt="Цртеж цилиндричног погонског зупчаника">
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="T_4_7" role="tabpanel" aria-labelledby="T_4_7-tab">
+                      <div class="accordion-body">
+                        <img src="Pictures/T4_7.jpg" width="100%" alt="Табела 7.59">
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="modeliranje_pogonskog_zupcanika" role="tabpanel" aria-labelledby="modeliranje_pogonskog_zupcanika-tab">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/xHbwDF38ljo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="dodatni_proracun_pogonski" role="tabpanel" aria-labelledby="dodatni_proracun_pogonski-tab">
+                      <div class="accordion-body">
+                        <p>
+                          <strong>
+                            Угао поклапања 
+                          </strong>
+                          међузубља 
+                          <strong>
+                            са зупцем гоњеног 
+                          </strong>
+                          зупчаника:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/alfa_pokl1=.png" alt="&alpha;pokl1="> 0.05578 rad
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/alfa_pokl1_solo=.png" alt="&alpha;pokl1="> 3.196 &deg;
+                        </p>
+                        <p class="left_padding">
+                          Ширину 
+                          <strong>
+                            погонског 
+                          </strong>
+                          зупчаника смо усвојили у завршном прорачуну: <img src="Pictures/png/b1=.png" alt="b1="> 80 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p class="left_padding">
+                          Угао 
+                          <strong>
+                            нагиба бочне 
+                          </strong>
+                          линије зубаца на подеоном кругу је задан по поставци задатка: <img src="Pictures/png/beta=.png" alt="beta="> 5 &deg;
+                        </p>
+                        <p class="left_padding">
+                          Пречник 
+                          <strong>
+                            подеоне 
+                          </strong>
+                          кружнице погонског зупчаника одређен у завршном прорачуну:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/d1=_pr.png" alt="d1=mt*z1="> 125.477 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          Угао 
+                          <strong>
+                            половине 
+                          </strong>
+                          корака погонског зупчаника:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/pola_koraka_pog.png" alt="&alpha;pt/2="> 0.1256637 rad
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/pola_koraka_pog.png" alt="&alpha;pt/2="> 7.2 &deg;
+                        </p>
+                        <p class="left_padding"> 
+                          <strong>
+                             Подеони 
+                          </strong>
+                          корак у главном пресеку одређен у завршном прорачуну:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/pt=.png" alt="pt="> 15.768 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          Полупречник 
+                          <strong>
+                            кинематске 
+                          </strong>
+                          кружнице смо одредили у завршном прорачуну:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/rw1=.png" alt="rw1="> 63.691 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="izrada_crteza_pogonskog_zupcanika" role="tabpanel" aria-labelledby="izrada_crteza_pogonskog_zupcanika-tab">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/WAt9yWB1NIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="gonjeni_zupcanik">
+                  <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_gonjeni_zupcanik" aria-expanded="true" aria-controls="collapse_gonjeni_zupcanik">
+                    Моделирање и цртеж гоњеног зупчаника
+                  </button>
+                </h2>
+                <div id="collapse_gonjeni_zupcanik" class="accordion-collapse collapse" aria-labelledby="gonjeni_zupcanik" data-bs-parent="#modeli_i_crtezi">
+                  <ul class="nav nav-tabs" id="gonjeni_zupcanik_Tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="crtez_gonjenog_zupcanika-tab" data-bs-toggle="tab" data-bs-target="#crtez_gonjenog_zupcanika" type="button" role="tab" aria-controls="crtez_gonjenog_zupcanika" aria-selected="true">Цртеж</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="T_4_7x2-tab" data-bs-toggle="tab" data-bs-target="#T_4_7x2" type="button" role="tab" aria-controls="T_4_7x2" aria-selected="false">Т 4.7</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="modeliranje_gonjenog_zupcanika-tab" data-bs-toggle="tab" data-bs-target="#modeliranje_gonjenog_zupcanika" type="button" role="tab" aria-controls="modeliranje_gonjenog_zupcanika" aria-selected="false">Моделирање</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="dodatni_proracun_gonjeni-tab" data-bs-toggle="tab" data-bs-target="#dodatni_proracun_gonjeni" type="button" role="tab" aria-controls="dodatni_proracun_gonjeni" aria-selected="false">Додатни прорачун</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="izrada_crteza_gonjenog_zupcanika-tab" data-bs-toggle="tab" data-bs-target="#izrada_crteza_gonjenog_zupcanika" type="button" role="tab" aria-controls="izrada_crteza_gonjenog_zupcanika" aria-selected="false">Израда цртежа</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="gonjeni_zupcanik_TabContent">
+                    <div class="tab-pane show active" id="crtez_gonjenog_zupcanika" role="tabpanel" aria-labelledby="crtez_gonjenog_zupcanika-tab">
+                      <div class="accordion-body">
+                        <img src="Pictures/Crtezi/Gonjeni_cilindricni_zupcanik.jpg" width="100%" alt="Цртеж цилиндричног гоњеног зупчаника">
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="T_4_7x2" role="tabpanel" aria-labelledby="T_4_7x2-tab">
+                      <div class="accordion-body">
+                        <img src="Pictures/T4_7.jpg" width="100%" alt="Табела 7.59">
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="modeliranje_gonjenog_zupcanika" role="tabpanel" aria-labelledby="modeliranje_gonjenog_zupcanika-tab">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/stVbtyk6LLA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="dodatni_proracun_gonjeni" role="tabpanel" aria-labelledby="dodatni_proracun_gonjeni-tab">
+                      <div class="accordion-body">
+                        <p>
+                          <strong>
+                            Угао поклапања 
+                          </strong>
+                          зупца 
+                          <strong>
+                            са међузубљем погонског 
+                          </strong>
+                          зупчаника:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/alfa_pokl2=.png" alt="&alpha;pokl2="> 0.026495 rad
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/alfa_pokl2_solo=.png" alt="&alpha;pokl2="> 1.518 &deg;
+                        </p>
+                        <p class="left_padding">
+                          Ширину 
+                          <strong>
+                            гоњеног 
+                          </strong>
+                          зупчаника смо усвојили у завршном прорачуну: <img src="Pictures/png/b2=.png" alt="b2="> 76 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p class="left_padding">
+                          Угао 
+                          <strong>
+                            нагиба бочне 
+                          </strong>
+                          линије зубаца на подеоном кругу је задан по поставци задатка: <img src="Pictures/png/beta=.png" alt="beta="> 5 &deg;
+                        </p>
+                        <p class="left_padding">
+                          Пречник 
+                          <strong>
+                            подеоне 
+                          </strong>
+                          кружнице гоњеног зупчаника одређен у завршном прорачуну:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/d2=_pr.png" alt="d2=mt*z2="> 250.955 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                          Полупречник 
+                          <strong>
+                            кинематске 
+                          </strong>
+                          кружнице смо одредили у завршном прорачуну:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/rw2=.png" alt="rw2="> 127.382 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="izrada_crteza_gonjenog_zupcanika" role="tabpanel" aria-labelledby="izrada_crteza_gonjenog_zupcanika-tab">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/DoLtR8ajHyo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="sklop">
+                  <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_sklop" aria-expanded="true" aria-controls="collapse_sklop">
+                    Моделирање склопа, анимација, израда цртежа и "Zip"
+                  </button>
+                </h2>
+                <div id="collapse_sklop" class="accordion-collapse collapse" aria-labelledby="sklop" data-bs-parent="#modeli_i_crtezi">
+                  <ul class="nav nav-tabs" id="sklop_Tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="crtez_sklopa-tab" data-bs-toggle="tab" data-bs-target="#crtez_sklopa" type="button" role="tab" aria-controls="crtez_sklopa" aria-selected="true">Цртеж</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="modeliranje_sklopa-tab" data-bs-toggle="tab" data-bs-target="#modeliranje_sklopa" type="button" role="tab" aria-controls="modeliranje_sklopa" aria-selected="false">Моделирање...</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="dodatna_objasnjenja-tab" data-bs-toggle="tab" data-bs-target="#dodatna_objasnjenja" type="button" role="tab" aria-controls="dodatna_objasnjenja" aria-selected="false">Додатна објашњења</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="zip_sklopa-tab" data-bs-toggle="tab" data-bs-target="#zip_sklopa" type="button" role="tab" aria-controls="zip_sklopa" aria-selected="false">"Zip" склопа</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="sklop_TabContent">
+                    <div class="tab-pane show active" id="crtez_sklopa" role="tabpanel" aria-labelledby="crtez_sklopa-tab">
+                      <div class="accordion-body">
+                        <img src="Pictures/Crtezi/Cilindricni_zupcasti_prenosnik_snage.jpg" width="100%" alt="Цртеж зупчастог пара">
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="modeliranje_sklopa" role="tabpanel" aria-labelledby="modeliranje_sklopa-tab">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/r99NeTzj7xs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="dodatna_objasnjenja" role="tabpanel" aria-labelledby="dodatna_objasnjenja-tab">
+                      <div class="accordion-body">
+                        <p>
+                          Приликом моделирања склопа редуктора, потребно је 
+                          <strong>
+                            обезбедити да се међузубље 
+                          </strong>
+                          погонског зупчаника 
+                          <strong>
+                            поклапа са озубљењем 
+                          </strong>
+                          гоњеног зупчаника и обрнуто!
+                        </p>
+                        <p>
+                          <strong>
+                            Угао поклапања 
+                          </strong>
+                          међузубља 
+                          <strong>
+                            са зупцем гоњеног 
+                          </strong>
+                          зупчаника:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/alfa_pokl1_solo=.png" alt="&alpha;pokl1="> 3.196 &deg;
+                        </p>
+                        <p>
+                          <strong>
+                            Угао поклапања 
+                          </strong>
+                          зупца 
+                          <strong>
+                            са међузубљем погонског 
+                          </strong>
+                          зупчаника:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/alfa_pokl2_solo=.png" alt="&alpha;pokl2="> 1.518 &deg;
+                        </p>
+                        <p>
+                          Полупречнике 
+                          <strong>
+                            кинематских 
+                          </strong>
+                          кружница смо одредили у завршном прорачуну:
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/rw1=.png" alt="rw1="> 63.691 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p class="left_padding">
+                          <img src="Pictures/png/rw2=.png" alt="rw2="> 127.382 <img src="Pictures/png/mm.png" alt="mm">
+                        </p>
+                        <p>
+                         Осно 
+                        <strong>
+                           растојање 
+                        </strong>
+                        зупчаника смо израчунали у завршном прорачуну:
+                      </p>
+                      <p class="left_padding">
+                        <img src="Pictures/png/a=.png" alt="a="> 191.074 <img src="Pictures/png/mm.png" alt="mm">
+                      </p>
+                      </div>
+                    </div>
+                    <div class="tab-pane" id="zip_sklopa" role="tabpanel" aria-labelledby="zip_sklopa-tab">
+                      <div class="accordion-body">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/7ui33O8MczM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <nav class="card-header" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">&copy; Slobodan Ivković</li>
+                  <li class="breadcrumb-item"><a href="https://www.linkedin.com/in/slobodan-ivkovic-a08326ba"><img src="Pictures/Icons/linkedin.png" alt="linkedin logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://twitter.com/slobodan_iv"><img src="Pictures/Icons/twitter.png" alt="twitter logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://www.youtube.com/user/Mickijedini"><img src="Pictures/Icons/youtube.png" alt="youtube logo"></a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- container -->
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

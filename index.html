@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather|Tangerine|Caveat" rel="stylesheet">
+    <!-- Bootstrap CSS
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Почетна страна!</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="Pictures/logo3.png" width="90" height="60" class="d-inline-block align-top rounded" alt="M3Design"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Поставка задатка</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Прорачуни
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="prethodni_proracun.html">Претходни прорачун</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="zavrsni_proracun.html">Завршни прорачун</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="proracun_evolventi.html">Прорачун еволвенти</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="st_sigurnosti.html">Степен сигурности</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tolerancije.html">Толеранције зупчаника</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="modeli_crtezi.html">Моделирање и цртежи</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Повезани Web site-ови
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Моделирање и симулација пом. рач.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/konstruisanje/">Конструисање</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav><!-- navbar -->
+    <!-- container -->
+    <div class="container">
+      <!-- Content here -->
+      <div>
+        <h1>Једностепени редуктор - улазни подаци</h1>
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-12 col-md-11 col-lg-10">
+            <div class="accordion" id="postavka">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="ulazni_podaci">
+                  <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_ulazni_podaci" aria-expanded="true" aria-controls="collapse_ulazni_podaci">
+                    Поставка задатка
+                  </button>
+                </h2>
+                <div id="collapse_ulazni_podaci" class="accordion-collapse collapse show" aria-labelledby="ulazni_podaci" data-bs-parent="#postavka">
+                  <div class="accordion-body">
+                    <p>
+                      Снага коју преносе зупчаници: <img src="Pictures/png/P=.png" alt="P="> 80 <img src="Pictures/png/kW.png" alt="kW">
+                    </p>
+                    <p>
+                      Број обртаја погонског зупчаника: <img src="Pictures/png/n1=.png" alt="n1="> 700 <img src="Pictures/png/min_1.png" alt="min-1">
+                    </p>
+                    <p>
+                      Преносни однос: <img src="Pictures/png/i=.png" alt="i="> 2
+                    </p>
+                    <p>
+                      Број зубаца погонског зупчаника: <img src="Pictures/png/z1=.png" alt="z1="> 25
+                    </p>
+                    <p>
+                      Угао нагиба бочне линије зубаца на подеоном кругу: <img src="Pictures/png/beta=.png" alt="beta="> 5 &deg;
+                    </p>
+                    <p>
+                      Смер нагиба бочне линије погонског зупчаника: десни
+                    </p>
+                    <p>
+                      Фактор ширине и пречника зупчаника: &phi; = 0.6
+                    </p>
+                    <p>
+                      Коефицијент померања профила: <img src="Pictures/png/xt1=.png" alt="xt1="> 0.4
+                    </p>
+                    <p>
+                      Коефицијент померања профила: <img src="Pictures/png/xt2=.png" alt="xt2="> 0.2
+                    </p>
+                    <p>
+                      Квалитет израде зупчаника: <img src="Pictures/png/IT7.png" alt="IT7">
+                    </p>
+                    <p>
+                      Фактор спољних динамичких сила: <img src="Pictures/png/KA=.png" alt="KA="> 1.25
+                    </p>
+                    <p>
+                      Материјал зупчаника: Č.1220
+                    </p>
+                    <p>
+                      Материјал вратила: Č.0545
+                    </p>
+                    <p>
+                      Положај зупчаника између лежаја: симетричан
+                    </p>
+                    <p>
+                      Веза вратила и зупчаника: нормални клин без нагиба JUS M.C2.060
+                    </p>
+                    <p>
+                      Потребан радни век лежаја: <img src="Pictures/png/Lh=.png" alt="Lh="> 30000 h
+                    </p>
+                    <p>
+                      Остали параметри се усвајају према препорукама.
+                    </p>
+                    <p>
+                      Растојање између лежаја: <img src="Pictures/png/L1=.png" alt="L1="> 160 <img src="Pictures/png/mm.png" alt="mm">
+                    </p>
+                    <p>
+                      Растојање између лежаја: <img src="Pictures/png/L2.png" alt="L2">
+                    </p>
+                    <h2>Потребно је:</h2>
+                    <ol>
+                      <li>
+                        одредити модул зупчаника на основу чрстоће,
+                      </li>
+                      <li>
+                        проверити степене сигурности бокова и подножја зубаца,
+                      </li>
+                      <li>
+                        израчунати геометријске величине озубљења,
+                      </li>
+                      <li>
+                        моделирати погонски и гоњени зупчаник,
+                      </li>
+                      <li>
+                        урадити радионичке цртеже зупчаника,
+                      </li>
+                      <li>
+                        урадити анализу сила и шему оптерећења вратила редуктора,
+                      </li>
+                      <li>
+                        остале параметре усвајати према препорукама (конструктивно),
+                      </li>
+                      <li>
+                        приложити све потребне табеле и дијаграме коришћене при прорачуну.
+                      </li>
+                    </ol>
+                    <h3>
+                      Литература - извори знања:
+                    </h3>
+                    <ul>
+                      <li>
+                        Машински елементи I, Спасоје Драпић- Београд.
+                      </li>
+                      <li>
+                        Машински елементи II, Спасоје Драпић- Београд.
+                      </li>
+                      <li>
+                        Основе конструисања за IV разред, Спасоје Драпић- Београд.
+                      </li>
+                      <li>
+                        Конструисање за IV разред, Спасоје Драпић- Београд.
+                      </li>
+                      <li>
+                        Инжењерско машински приручник 2, завод за уџбенике и наставна средства Београд 1992. год. група аутора.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="sema">
+                  <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_sema" aria-expanded="true" aria-controls="collapse_sema">
+                    Анализа сила и шема оптерећења вратила редуктора
+                  </button>
+                </h2>
+                <div id="collapse_sema" class="accordion-collapse collapse" aria-labelledby="sema" data-bs-parent="#postavka">
+                  <p>
+                    Анализа сила на зупчаницима:
+                  </p>
+                  <div class="accordion-body">
+                    <img src="Pictures/Sema.jpg" width="100%" alt="Шема ручне дизалице">
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="cz_princip_rada">
+                  <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_cz_princip_rada" aria-expanded="true" aria-controls="collapse_cz_princip_rada">
+                    Једностепени редуктор са цилиндричним зупчаницима
+                  </button>
+                </h2>
+                <div id="collapse_cz_princip_rada" class="accordion-collapse collapse" aria-labelledby="cz_princip_rada" data-bs-parent="#postavka">
+                  <div class="accordion-body">
+                    <ul class="nav nav-tabs" id="Cilindricni_zupcasti_par_sklop_Tab" role="tablist">
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="Cilindricni_zupcasti_par_sklop_modeliranje-tab" data-bs-toggle="tab" data-bs-target="#Cilindricni_zupcasti_par_sklop_modeliranje" type="button" role="tab" aria-controls="Cilindricni_zupcasti_par_sklop_modeliranje" aria-selected="true">Моделирање редуктора</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="Cilindricni_zupcasti_par_animacija-tab" data-bs-toggle="tab" data-bs-target="#Cilindricni_zupcasti_par_animacija" type="button" role="tab" aria-controls="Cilindricni_zupcasti_par_animacija" aria-selected="false">Анимација редуктора</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="Cilindricni_zupcanik_i_zupcanica_animacija-tab" data-bs-toggle="tab" data-bs-target="#Cilindricni_zupcanik_i_zupcanica_animacija" type="button" role="tab" aria-controls="Cilindricni_zupcanik_i_zupcanica_animacija" aria-selected="false">Зупчаник и зупчаница</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="Cilindricni_zupcanik_i_zupcanica_3D-tab" data-bs-toggle="tab" data-bs-target="#Cilindricni_zupcanik_i_zupcanica_3D" type="button" role="tab" aria-controls="Cilindricni_zupcanik_i_zupcanica_3D" aria-selected="false">3D зупчаник и зупчаница</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="Cilindricni_zupcasti_par_mail-tab" data-bs-toggle="tab" data-bs-target="#Cilindricni_zupcasti_par_mail" type="button" role="tab" aria-controls="Cilindricni_zupcasti_par_mail" aria-selected="false">"Zip" склопа</button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="Cilindricni_par_Web_aplikacija-tab" data-bs-toggle="tab" data-bs-target="#Cilindricni_par_Web_aplikacija" type="button" role="tab" aria-controls="Cilindricni_par_Web_aplikacija" aria-selected="false">"Web" апликација</button>
+                      </li>
+                    </ul>
+                    <div class="tab-content" id="Cilindricni_zupcasti_par_sklop_TabContent">
+                      <div class="tab-pane show active" id="Cilindricni_zupcasti_par_sklop_modeliranje" role="tabpanel" aria-labelledby="Cilindricni_zupcasti_par_sklop_modeliranje-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/r99NeTzj7xs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="Cilindricni_zupcasti_par_animacija" role="tabpanel" aria-labelledby="Cilindricni_zupcasti_par_animacija-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/l543hlRLusQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="Cilindricni_zupcanik_i_zupcanica_animacija" role="tabpanel" aria-labelledby="Cilindricni_zupcanik_i_zupcanica_animacija-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/R_2Z3VoXLoQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="Cilindricni_zupcanik_i_zupcanica_3D" role="tabpanel" aria-labelledby="Cilindricni_zupcanik_i_zupcanica_3D-tab">
+                        <div id="carousel_3D_zup_i_zupc" class="carousel carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carousel_3D_zup_i_zupc" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carousel_3D_zup_i_zupc" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carousel_3D_zup_i_zupc" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carousel_3D_zup_i_zupc" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          </div>
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img src="Pictures/Carousel/3D_1.jpg" class="d-block w-100" alt="Одштампани 3D зупчаник и зупчаница">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="Pictures/Carousel/3D_2.jpg" class="d-block w-100" alt="Одштампани 3D зупчаник и зупчаница">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="Pictures/Carousel/3D_3.jpg" class="d-block w-100" alt="Склопљен 3D модел">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="Pictures/Carousel/3D_4.jpg" class="d-block w-100" alt="Склопљен 3D модел">
+                            </div>
+                          </div>
+                          <button class="carousel-control-prev" type="button" data-bs-target="#carousel_3D_zup_i_zupc" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                          </button>
+                          <button class="carousel-control-next" type="button" data-bs-target="#carousel_3D_zup_i_zupc" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="Cilindricni_zupcasti_par_mail" role="tabpanel" aria-labelledby="Cilindricni_zupcasti_par_mail-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/7ui33O8MczM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                      <div class="tab-pane" id="Cilindricni_par_Web_aplikacija" role="tabpanel" aria-labelledby="Cilindricni_par_Web_aplikacija-tab">
+                        <div class="card ratio ratio-16x9">
+                          <iframe width="560" height="315" src="https://www.youtube.com/embed/ITlhFOm_G3M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="download">
+                  <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_download" aria-expanded="true" aria-controls="collapse_download">
+                    Download докумената:
+                  </button>
+                </h2>
+                <div id="collapse_download" class="accordion-collapse collapse" aria-labelledby="download" data-bs-parent="#postavka">
+                  <p>
+                    <a href="static/III_graficki_rad.docx">"Word"-ов документ, I страна - download</a>
+                  </p>
+                  <p>
+                    <a href="static/Postavka_zupcanici_2021_2022.pdf">"PDF" документ, поставка задатка - download</a>
+                  </p>
+                  <p>
+                    <a href="static/Proracun_zupcanika_prazno.xls">"Excel"-ов документ, прорачун без вредности - download</a>
+                  </p>
+                  <p>
+                    <a href="static/Proracun_zupcanika.pdf">"PDF" документ, пример прорачуна - download</a>
+                  </p>
+                  <p>
+                    <a href="static/Tablice_zupcanika.pdf">"PDF" документ, таблице за прорачун - download</a>
+                  </p>
+                  <p>
+                    <a href="static/Tolerancije_zupcanika.pdf">"PDF" документ, таблице за толеранције - download</a>
+                  </p>
+                  <p>
+                    <a href="static/Evovlventa_2021_2022.pdf">"PDF" документ, изведени обрасци за прорачун зупчаника - download</a>
+                  </p>
+                  <p>
+                    <a href="static/Analiza_sila_projektni_zadatak.pps">"PDF" документ, Анализа сила на зупчаницима и шема оптерећења вратила редуктора - download</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <nav class="card-header" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">&copy; Slobodan Ivković</li>
+                  <li class="breadcrumb-item"><a href="https://www.linkedin.com/in/slobodan-ivkovic-a08326ba"><img src="Pictures/Icons/linkedin.png" alt="linkedin logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://twitter.com/slobodan_iv"><img src="Pictures/Icons/twitter.png" alt="twitter logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://www.youtube.com/user/Mickijedini"><img src="Pictures/Icons/youtube.png" alt="youtube logo"></a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- container -->
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

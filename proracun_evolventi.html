@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather|Tangerine|Caveat" rel="stylesheet">
+    <!-- Bootstrap CSS
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Прорачун еволвенти!</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="Pictures/logo3.png" width="90" height="60" class="d-inline-block align-top rounded" alt="M3Design"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Поставка задатка</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Прорачуни
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="prethodni_proracun.html">Претходни прорачун</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="zavrsni_proracun.html">Завршни прорачун</a>
+                </li>
+                <li>
+                  <a class="dropdown-item active" href="#">Прорачун еволвенти</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="st_sigurnosti.html">Степен сигурности</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tolerancije.html">Толеранције зупчаника</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="modeli_crtezi.html">Моделирање и цртежи</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Повезани Web site-ови
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Моделирање и симулација пом. рач.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/konstruisanje/">Конструисање</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav><!-- navbar -->
+    <!-- container -->
+    <div class="container">
+      <!-- Content here -->
+      <div>
+        <h1>Прорачун еволвенти зупчаног пара</h1>
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-12 col-md-11 col-lg-10">
+            <div class="accordion-item" id="zav_proracun">
+              <p>
+                На основу израчунатих димензија зупчаног пара у 
+                <strong>
+                   завршном 
+                </strong>
+                прорачуну могу се урадити радионички цртежи погонског и гоњеног зупчаника.
+              </p>
+              <p>
+                Међутим за моделирање профила и бока зупца, 
+                <strong>
+                  потребно је одредити тачке еволвенте 
+                </strong>
+                и кроз исте повући лучне линије.
+              </p>
+              <div class="accordion" id="accordion_Lucna_debljina_dy">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="heading_Lucna_debljina_dy">
+                    <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Lucna_debljina_dy" aria-expanded="true" aria-controls="collapse_Lucna_debljina_dy">
+                      Лучна дебљина зупца на било којој кружници
+                    </button>
+                  </h2>
+                  <div id="collapse_Lucna_debljina_dy" class="accordion-collapse collapse" aria-labelledby="heading_Lucna_debljina_dy" data-bs-parent="#accordion_Lucna_debljina_dy">
+                    <div class="accordion-body">
+                      <img src="Pictures/Lucna_debljina_dy.jpg" width="100%" alt="Лучна дебљина зупца на било којој кружници">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                Поступак се састоји из следећих 
+                <strong>
+                  корака
+                </strong>
+                :
+              </p>
+              <ul class="left_padding welcome">
+                <li>
+                  израчунати лучне дебљине зупца на:
+                  <strong>
+                    подеоној, основној кружници
+                  </strong>
+                  ,  
+                </li>
+                <li>
+                   из центра кружница повући углове који 
+                   <strong>
+                     одређују 
+                   </strong>
+                   поменуте лучне дебљине еволвентног профила зупца,
+                </li>
+                <li>
+                  одредити 
+                  <strong>
+                    пресечне 
+                  </strong>
+                  тачке углова из претходног корака са одговарајућим кружницама, (добијају се по две тачке у односу на осу симетрије еволвенте),
+                </li>
+                <li>
+                  одредити полупречник кружнице за који се добија 
+                  <strong>
+                    нулта 
+                  </strong>
+                  дебљина еволвентног зупца,
+                </li>
+                <li>
+                  кроз добијене тачке 
+                  <strong>
+                    измоделирати еволвенту 
+                  </strong>
+                  (по две тачке у односу на осу симетрије еволвенте и једна на врху за коју важи да је дебљина еволвентног профила једнака нули).
+                </li>
+              </ul>
+              <ul class="nav nav-tabs" id="proracun_evolventi_Tab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="evolventa_pog_zup-tab" data-bs-toggle="tab" data-bs-target="#evolventa_pog_zup" type="button" role="tab" aria-controls="evolventa_pog_zup" aria-selected="true">Еволвента погонског зупчаника</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="evolventa_gonj_zup-tab" data-bs-toggle="tab" data-bs-target="#evolventa_gonj_zup" type="button" role="tab" aria-controls="evolventa_gonj_zup" aria-selected="false">Еволвента гоњеног зупчаника</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="proracun_evolventi_TabContent">
+                <div class="tab-pane show active" id="evolventa_pog_zup" role="tabpanel" aria-labelledby="evolventa_pog_zup-tab">
+                  <p>
+                    лучна дебљина зупца на 
+                    <strong>
+                      подеоној 
+                    </strong>
+                    кружници у главном пресеку:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/St=.png" alt="St="> 9.351 <img src="Pictures/png/mm.png" alt="mm">
+                  </p>
+                  <p class="left_padding">
+                    где је: <img src="Pictures/png/xt1=.png" alt="xt1="> 0.4
+                  </p>
+                  <div class="accordion" id="accordion_Lucna_debljina_d">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading_Lucna_debljina_d">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Lucna_debljina_d" aria-expanded="true" aria-controls="collapse_Lucna_debljina_d">
+                          Лучна дебљина зупца на подеоној кружници
+                        </button>
+                      </h2>
+                      <div id="collapse_Lucna_debljina_d" class="accordion-collapse collapse" aria-labelledby="heading_Lucna_debljina_d" data-bs-parent="#accordion_Lucna_debljina_d">
+                        <div class="accordion-body">
+                          <img src="Pictures/Lucna_debljina_d.jpg" width="100%" alt="Лучна дебљина зупца на подеоној кружници">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <strong>
+                      угао 
+                    </strong>
+                    крајњих тачака лучне дебљине зупца
+                    <strong>
+                       на подеоној 
+                    </strong>
+                    кружници у главном пресеку:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_t_ev=.png" alt="&alpha;t="> 0.149 rad
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_t_ev=.png" alt="&alpha;t="> 8.540 &deg;
+                  </p>
+                  <p>
+                    лучна дебљина зупца на 
+                    <strong>
+                      основној 
+                    </strong>
+                    кружници у главном пресеку:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/Sbt=.png" alt="Sbt="> 10.559 <img src="Pictures/png/mm.png" alt="mm">
+                  </p>
+                  <div class="accordion" id="accordion_Lucna_debljina_dyx1">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading_Lucna_debljina_dyx1">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Lucna_debljina_dyx1" aria-expanded="true" aria-controls="collapse_Lucna_debljina_dyx1">
+                          Лучна дебљина зупца на било којој кружници
+                        </button>
+                      </h2>
+                      <div id="collapse_Lucna_debljina_dyx1" class="accordion-collapse collapse" aria-labelledby="heading_Lucna_debljina_dyx1" data-bs-parent="#accordion_Lucna_debljina_dyx1">
+                        <div class="accordion-body">
+                          <img src="Pictures/Lucna_debljina_dy.jpg" width="100%" alt="Лучна дебљина зупца на било којој кружници">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <strong>
+                      угао 
+                    </strong>
+                    крајњих тачака лучне дебљине зупца
+                    <strong>
+                       на основној 
+                    </strong>
+                    кружници у главном пресеку:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_bt=.png" alt="&alpha;bt="> 0.179 rad
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_bt=.png" alt="&alpha;bt="> 10.266 &deg;
+                  </p>
+                  <p>
+                    за случај 
+                    <strong>
+                       највећег 
+                    </strong>
+                    полупречника темене кружнице имамо нулту дебљину зупца:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/invAlfaamax=.png" alt="inv&alpha;amax="> 0.089591 rad
+                  </p>
+                  <p>
+                    еволвентни угао се одређује на следећи начин: из Т 7.164 бирамо вредност: <img src="Pictures/png/k=.png" alt="k="> 2.6
+                  </p>
+                  <div class="accordion" id="accordion_T_7_164">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading_T_7_164">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T_7_164" aria-expanded="true" aria-controls="collapse_T_7_164">
+                          Т 7.164 - Вредност k за дати еволвентни угао
+                        </button>
+                      </h2>
+                      <div id="collapse_T_7_164" class="accordion-collapse collapse" aria-labelledby="heading_T_7_164" data-bs-parent="#accordion_T_7_164">
+                        <div class="accordion-body">
+                          <img src="Pictures/T_7_164.jpg" width="100%" alt="T7.164">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    рачунамо прву приближну вредност:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_a_max1=.png" alt="&alpha;amax1="> 0.615289 rad
+                  </p>
+                  <p>
+                    Рачунамо еволвентни угао:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/invAlfaamax1=.png" alt="inv&alpha;amax1="> 0.091532 rad
+                  </p>
+                  <p>
+                    рачунамо грешку:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/delta_a1=.png" alt="&delta;a1="> 0.001940817 rad
+                  </p>
+                  <p>
+                    <strong>
+                      усвајамо дозвољену грешку: 
+                    </strong>
+                    <img src="Pictures/png/delta_doz_usv.png" alt="&delta;doz=10^-5">
+                  </p>
+                  <p>
+                    Морамо рачунати 
+                    <strong>
+                      другу 
+                    </strong>
+                    приближну вредност:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_a_max2=.png" alt="&alpha;amax2="> 0.611404 rad
+                  </p>
+                  <p>
+                    Рачунамо еволвентни угао:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/invAlfaamax2=.png" alt="inv&alpha;amax2="> 0.0896069 rad
+                  </p>
+                  <p>
+                    рачунамо грешку:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/delta_a2=.png" alt="&delta;a2="> 1.5923E-05 rad
+                  </p>
+                  <p>
+                    Морамо рачунати 
+                    <strong>
+                      трећу 
+                    </strong>
+                    приближну вредност:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_a_max3=.png" alt="&alpha;amax3="> 0.611372 rad
+                  </p>
+                  <p>
+                    Рачунамо еволвентни угао:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/invAlfaamax3=.png" alt="inv&alpha;amax3="> 0.089591 rad
+                  </p>
+                  <p>
+                    рачунамо грешку:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/delta_a3=.png" alt="&delta;a3="> 1.098E-09 rad
+                  </p>
+                  <p>
+                    Грешка је мања од дозвољене, 
+                    <strong>
+                      нулта 
+                    </strong>
+                    дебљина зупца се постиже за еволвентни угао:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_a_max=.png" alt="&alpha;amax="> 0.6113719 rad
+                  </p>
+                  <p>
+                    <strong>
+                      Највећи 
+                    </strong>
+                    полупречник темене кружнице, где добијамо 
+                    <strong>
+                      нулту дебљину 
+                    </strong>
+                    зупца износи:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/r_a_max1=.png" alt="ramax1="> 71.964 <img src="Pictures/png/mm.png" alt="mm">
+                  </p>
+                </div>
+                <div class="tab-pane" id="evolventa_gonj_zup" role="tabpanel" aria-labelledby="evolventa_gonj_zup-tab">
+                  <p>
+                    лучна дебљина зупца на 
+                    <strong>
+                      подеоној 
+                    </strong>
+                    кружници у главном пресеку:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/St=.png" alt="St="> 8.617 <img src="Pictures/png/mm.png" alt="mm">
+                  </p>
+                  <p class="left_padding">
+                    где је: <img src="Pictures/png/xt2=.png" alt="xt2="> 0.2
+                  </p>
+                  <div class="accordion" id="accordion_Lucna_debljina_dx1">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading_Lucna_debljina_dx1">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Lucna_debljina_dx1" aria-expanded="true" aria-controls="collapse_Lucna_debljina_dx1">
+                          Лучна дебљина зупца на подеоној кружници
+                        </button>
+                      </h2>
+                      <div id="collapse_Lucna_debljina_dx1" class="accordion-collapse collapse" aria-labelledby="heading_Lucna_debljina_dx1" data-bs-parent="#accordion_Lucna_debljina_dx1">
+                        <div class="accordion-body">
+                          <img src="Pictures/Lucna_debljina_d.jpg" width="100%" alt="Лучна дебљина зупца на подеоној кружници">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <strong>
+                      угао 
+                    </strong>
+                    крајњих тачака лучне дебљине зупца
+                    <strong>
+                       на подеоној 
+                    </strong>
+                    кружници у главном пресеку:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_t_d2_ev=.png" alt="&alpha;t="> 0.069 rad
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_t_d2_ev=.png" alt="&alpha;t="> 3.935 &deg;
+                  </p>
+                  <p>
+                    лучна дебљина зупца на 
+                    <strong>
+                      основној 
+                    </strong>
+                    кружници у главном пресеку:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/Sbt_d2=.png" alt="Sbt="> 11.646 <img src="Pictures/png/mm.png" alt="mm">
+                  </p>
+                  <div class="accordion" id="accordion_Lucna_debljina_dyx2">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading_Lucna_debljina_dyx2">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Lucna_debljina_dyx2" aria-expanded="true" aria-controls="collapse_Lucna_debljina_dyx2">
+                          Лучна дебљина зупца на било којој кружници
+                        </button>
+                      </h2>
+                      <div id="collapse_Lucna_debljina_dyx2" class="accordion-collapse collapse" aria-labelledby="heading_Lucna_debljina_dyx2" data-bs-parent="#accordion_Lucna_debljina_dyx2">
+                        <div class="accordion-body">
+                          <img src="Pictures/Lucna_debljina_dy.jpg" width="100%" alt="Лучна дебљина зупца на било којој кружници">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    <strong>
+                      угао 
+                    </strong>
+                    крајњих тачака лучне дебљине зупца
+                    <strong>
+                       на основној 
+                    </strong>
+                    кружници у главном пресеку:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_bt_db2=.png" alt="&alpha;bt="> 0.099 rad
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_bt_db2=.png" alt="&alpha;bt="> 5.662 &deg;
+                  </p>
+                  <p>
+                    за случај 
+                    <strong>
+                       највећег 
+                    </strong>
+                    полупречника темене кружнице имамо нулту дебљину зупца:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/invAlfaamax_d2=.png" alt="inv&alpha;amax="> 0.049406 rad
+                  </p>
+                  <p>
+                    еволвентни угао се одређује на следећи начин: из Т 7.164 бирамо вредност: <img src="Pictures/png/k=.png" alt="k="> 2.7
+                  </p>
+                  <div class="accordion" id="accordion_T_7_164x1">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="heading_T_7_164x1">
+                        <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T_7_164x1" aria-expanded="true" aria-controls="collapse_T_7_164x1">
+                          Т 7.164 - Вредност k за дати еволвентни угао
+                        </button>
+                      </h2>
+                      <div id="collapse_T_7_164x1" class="accordion-collapse collapse" aria-labelledby="heading_T_7_164x1" data-bs-parent="#accordion_T_7_164x1">
+                        <div class="accordion-body">
+                          <img src="Pictures/T_7_164.jpg" width="100%" alt="T7.164">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>
+                    рачунамо прву приближну вредност:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_a_max1=.png" alt="&alpha;amax1="> 0.510955 rad
+                  </p>
+                  <p>
+                    Рачунамо еволвентни угао:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/invAlfaamax1=.png" alt="inv&alpha;amax1="> 0.049658 rad
+                  </p>
+                  <p>
+                    рачунамо грешку:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/delta_a1=.png" alt="&delta;a1="> 0.000252 rad
+                  </p>
+                  <p>
+                    <strong>
+                      усвајамо дозвољену грешку: 
+                    </strong>
+                    <img src="Pictures/png/delta_doz_usv.png" alt="&delta;doz=10^-5">
+                  </p>
+                  <p>
+                    Морамо рачунати 
+                    <strong>
+                      другу 
+                    </strong>
+                    приближну вредност:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_a_max2=.png" alt="&alpha;amax2="> 0.510154 rad
+                  </p>
+                  <p>
+                    Рачунамо еволвентни угао:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/invAlfaamax2=.png" alt="inv&alpha;amax2="> 0.0494069 rad
+                  </p>
+                  <p>
+                    рачунамо грешку:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/delta_a2=.png" alt="&delta;a2="> 4.72E-07 rad
+                  </p>
+                  <p>
+                    Грешка је мања од дозвољене, ради 
+                    <strong>
+                       вежбе
+                    </strong>
+                     рачунамо и трећу приближну вредност:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_a_max3=.png" alt="&alpha;amax3="> 0.510152 rad
+                  </p>
+                  <p>
+                    Рачунамо еволвентни угао:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/invAlfaamax3=.png" alt="inv&alpha;amax3="> 0.049406 rad
+                  </p>
+                  <p>
+                    рачунамо грешку:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/delta_a3=.png" alt="&delta;a3="> 1.67E-12 rad
+                  </p>
+                  <p>
+                    Грешка је мања од дозвољене, 
+                    <strong>
+                      нулта 
+                    </strong>
+                    дебљина зупца се постиже за еволвентни угао:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/alfa_a_max=.png" alt="&alpha;amax="> 0.5101523 rad
+                  </p>
+                  <p>
+                    <strong>
+                      Највећи 
+                    </strong>
+                    полупречник темене кружнице, где добијамо 
+                    <strong>
+                      нулту дебљину 
+                    </strong>
+                    зупца износи:
+                  </p>
+                  <p class="left_padding">
+                    <img src="Pictures/png/r_a_max2=.png" alt="ramax2="> 135.054 <img src="Pictures/png/mm.png" alt="mm">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <nav class="card-header" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">&copy; Slobodan Ivković</li>
+                  <li class="breadcrumb-item"><a href="https://www.linkedin.com/in/slobodan-ivkovic-a08326ba"><img src="Pictures/Icons/linkedin.png" alt="linkedin logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://twitter.com/slobodan_iv"><img src="Pictures/Icons/twitter.png" alt="twitter logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://www.youtube.com/user/Mickijedini"><img src="Pictures/Icons/youtube.png" alt="youtube logo"></a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- container -->
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

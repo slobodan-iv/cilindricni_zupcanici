@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="sr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Merriweather|Tangerine|Caveat" rel="stylesheet">
+    <!-- Bootstrap CSS
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>Степен сигурности!</title>
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="Pictures/logo3.png" width="90" height="60" class="d-inline-block align-top rounded" alt="M3Design"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Поставка задатка</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Прорачуни
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="prethodni_proracun.html">Претходни прорачун</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="zavrsni_proracun.html">Завршни прорачун</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="proracun_evolventi.html">Прорачун еволвенти</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Степен сигурности</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tolerancije.html">Толеранције зупчаника</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="modeli_crtezi.html">Моделирање и цртежи</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                Повезани Web site-ови
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item disabled" href="#" tabindex="-1" aria-disabled="true">Моделирање и симулација пом. рач.</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="https://slobodan-iv.github.io/konstruisanje/">Конструисање</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav><!-- navbar -->
+    <!-- container -->
+    <div class="container">
+      <!-- Content here -->
+      <div>
+        <h1>Провера степена сигурности против лома зубаца</h1>
+        <div class="row justify-content-center">
+          <div class="col-12 col-sm-12 col-md-11 col-lg-10">
+            <div class="accordion-item" id="st_sigurnosti">
+              <p>
+                <strong>
+                  Разарање у подножју 
+                </strong>
+                зупца (лом) је 
+                <strong>
+                  неповољније од 
+                </strong>
+                разрања 
+                <strong>
+                  бокова 
+                </strong>
+                зупца, па је потребно проверити степен сигурности против лома зубаца како следи:
+              </p>
+              <p>
+                <img src="Pictures/png/S_loma=.png" alt="S="> 4.134 
+              </p>
+              <p>
+                <img src="Pictures/png/S=.png" alt="S="> 1.6 до 2.4 препоручене вредности!
+              </p>
+              <p>
+                где смо 
+                <strong>
+                  претходно 
+                </strong>
+                израчунали следеће величине:
+              </p>
+              <div class="accordion" id="accordion_Str_138">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="heading_Str_138">
+                    <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Str_138" aria-expanded="true" aria-controls="collapse_Str_138">
+                      Y&pi; - утицај вредности модула зупчаника
+                    </button>
+                  </h2>
+                  <div id="collapse_Str_138" class="accordion-collapse collapse" aria-labelledby="heading_Str_138" data-bs-parent="#accordion_Str_138">
+                    <div class="accordion-body">
+                      <img src="Pictures/Str_138.jpg" width="100%" alt="Y&pi; - утицај модула зупчаника">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <img src="Pictures/png/y_p=.png" alt="Y&pi;="> 2 - стр.138. M.E.II, усвојена вредност!
+              </p>
+              <p>
+                Трајна динамичка издржљивост <strong>подножја</strong> зубаца за једносмерну промену напона (према табели Т 4.5 М.Е II за Č.1220): 
+              </p>
+              <div class="accordion" id="accordion_T4_5x2">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="heading_T4_5x2">
+                    <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T4_5x2" aria-expanded="true" aria-controls="collapse_T4_5x2">
+                      Т 4.5 - Механичке карактеристике
+                    </button>
+                  </h2>
+                  <div id="collapse_T4_5x2" class="accordion-collapse collapse" aria-labelledby="heading_T4_5x2" data-bs-parent="#accordion_T4_5x2">
+                    <div class="accordion-body">
+                      <img src="Pictures/T_4_5.jpg" width="100%" alt="T4.5">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <img src="Pictures/png/sigma_Flim=.png" alt="&sigma;Flim="> 416 <img src="Pictures/png/N_mm2.png" alt="N/mm2"> - према Т 4.5 М.Е II за Č.1220,
+              </p>
+              <p>
+                <strong>
+                  Напон у подножју 
+                </strong>
+                зубаца цилиндричних зупчаника:
+              </p>
+              <p>
+                <img src="Pictures/png/sigmaF_kosi=.png" alt="&sigma;F="> 201.269 <img src="Pictures/png/N_mm2.png" alt="N/mm2">
+              </p>
+              <p>
+                на основу вредности израза: <img src="Pictures/png/zn1=.png" alt="zn1="> 25.288 и <img src="Pictures/png/xt1=.png" alt="xt1="> 0.4, одређујемо следеће величине:
+              </p>
+              <p>
+                <strong>
+                  Фактор облика 
+                </strong>
+                зубаца, одређујмо из Т 4.8 М.Е.II. за: <img src="Pictures/png/yfa=.png" alt="yFa="> 2.265
+              </p>
+              <div class="accordion" id="accordion_T_4_8">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="heading_T_4_8">
+                    <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_T_4_8" aria-expanded="true" aria-controls="collapse_T_4_8">
+                      T 4.8 - Фактор облика зубаца
+                    </button>
+                  </h2>
+                  <div id="collapse_T_4_8" class="accordion-collapse collapse" aria-labelledby="heading_T_4_8" data-bs-parent="#accordion_T_4_8">
+                    <div class="accordion-body">
+                      <img src="Pictures/T_4_8.jpg" width="100%" alt="T 4.8">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <strong>
+                  Фактор концентрације 
+                </strong>
+                напона, одређујемо са Сл. 4.54 М.Е.II: <img src="Pictures/png/y_sa=.png" alt="y_sa="> 1.985
+              </p>
+              <div class="accordion" id="accordion_Sl_4_54">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="heading_Sl_4_54">
+                    <button class="btn accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse_Sl_4_54" aria-expanded="true" aria-controls="collapse_Sl_4_54">
+                      Сл. 4.54 - Фактор концентрације напона
+                    </button>
+                  </h2>
+                  <div id="collapse_Sl_4_54" class="accordion-collapse collapse" aria-labelledby="heading_Sl_4_54" data-bs-parent="#accordion_Sl_4_54">
+                    <div class="accordion-body">
+                      <img src="Pictures/Sl_4_54.jpg" width="100%" alt="Сл. 4.54 - ">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p>
+                <strong>
+                  Фактор положаја 
+                </strong>
+                одређујемо на основу израза:
+              </p>
+              <p>
+                <img src="Pictures/png/y_eps=.png" alt="y&epsilon;="> 0.720
+              </p>
+              <p>
+                <strong>
+                  степен спрезања профила 
+                </strong>
+                одређујемо у завршном прорачуну:<img src="Pictures/png/eps_alfa=.png" alt="&epsilon;&alpha;="> 1.594
+              </p>
+              <p>
+                <strong>
+                  Утицај 
+                </strong>
+                облика 
+                <strong>
+                  косозубих 
+                </strong>
+                зупчаника: <img src="Pictures/png/y_beta=.png" alt="y&beta;="> 0.982
+              </p>
+              <p>
+                <strong>
+                  степен спрезања бочних линија
+                </strong>
+                одређујемо у завршном прорачуну:<img src="Pictures/png/eps_beta_solo=.png" alt="&epsilon;&beta;="> 0.422
+              </p>
+              <p>
+                <strong>
+                  Фактор расподеле 
+                </strong>
+                оптерћења: 
+              </p>
+              <p>
+                <img src="Pictures/png/Kf_beta=.png" alt="KF&beta;="> 1.030
+              </p>
+              <p>
+                <strong>
+                  где експонент 
+                </strong>
+                рачунамо на основу израза: <img src="Pictures/png/p_eksp=.png" alt="p="> 0.852
+              </p>
+              <p>
+                <strong>
+                  Ширина зубаца зупчаника: 
+                </strong>
+                <img src="Pictures/png/b=.png" alt="b="> 75.28649 - тј. усвајамо ширину спрезања: <img src="Pictures/png/b=_pr.png" alt="b="> 76 <img src="Pictures/png/mm.png" alt="mm">
+              </p>
+              <p>
+                <strong>
+                   Висину зубаца зупчаника
+                </strong>
+                 рачунамо по једначини: <img src="Pictures/png/visina_zubaca.png" alt="h">
+              </p>
+              <p>
+                погонског зупчанка: <img src="Pictures/png/visina_zubaca1=.png" alt="h1="> 11.504 <img src="Pictures/png/mm.png" alt="mm">
+              </p>
+              <p>
+                гоњеног зупчанка: <img src="Pictures/png/visina_zubaca2=.png" alt="h2="> 11.269 <img src="Pictures/png/mm.png" alt="mm">
+              </p>
+              <p>
+                Рачунамо вредности следећих величина: <img src="Pictures/png/b_sa_h1.png" alt="b/h1">, <img src="Pictures/png/b_sa_h2.png" alt="b/h2"> и усвајамо 
+                <strong>
+                  минималану 
+                </strong>вредност од израчунатих tj. <img src="Pictures/png/b_sa_hmin.png" alt="(b/h)min">
+              </p>
+              <p>
+                <strong>
+                  Меродавна за 
+                </strong>
+                прорачун је вредност: <img src="Pictures/png/b_sa_h=.png" alt="b/h="> 6.607 <img src="Pictures/png/mm.png" alt="mm">
+              </p>
+              <p>
+                <strong>
+                  Обимна сила: 
+                </strong>
+                <img src="Pictures/png/Ft=.png" alt="Ft="> 17395.124 <img src="Pictures/png/N.png" alt="N">
+              </p>
+              <p>
+                <strong>
+                  Напомена
+                </strong>
+                : фактори за фино штеловање (подешавање) тачности резултата са жељеним бројем децимала су: <img src="Pictures/png/Khbeta.png" alt="KH&beta;"> (претходни прорачун), <img src="Pictures/png/yfa.png" alt="yFa"> и <img src="Pictures/png/y_sa.png" alt="y_sa">.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer -->
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-body">
+              <nav class="card-header" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item">&copy; Slobodan Ivković</li>
+                  <li class="breadcrumb-item"><a href="https://www.linkedin.com/in/slobodan-ivkovic-a08326ba"><img src="Pictures/Icons/linkedin.png" alt="linkedin logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://twitter.com/slobodan_iv"><img src="Pictures/Icons/twitter.png" alt="twitter logo"></a></li>
+                  <li class="breadcrumb-item"><a href="https://www.youtube.com/user/Mickijedini"><img src="Pictures/Icons/youtube.png" alt="youtube logo"></a></li>
+                </ol>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- container -->
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script> -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>-->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
